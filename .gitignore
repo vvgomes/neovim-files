@@ -7,3 +7,4 @@ foo.*
 *.log
 data
 .rebel_readline_history
+CLAUDE.md
