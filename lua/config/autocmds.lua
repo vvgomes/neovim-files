@@ -7,13 +7,19 @@
 -- Or remove existing autocmds by their group name (which is prefixed with `lazyvim_` for the defaults)
 -- e.g. vim.api.nvim_del_augroup_by_name("lazyvim_wrap_spell")
 
--- Make window separators more visible
+-- Make window separators more visible with Tokyo Night colors
 vim.api.nvim_create_autocmd("ColorScheme", {
   pattern = "*",
   callback = function()
-    vim.api.nvim_set_hl(0, "WinSeparator", { fg = "#6c7d9c", bold = true })
+    -- Tokyo Night border color
+    vim.api.nvim_set_hl(0, "WinSeparator", { fg = "#565f89", bold = true })
+    -- Add statusline separator
+    vim.api.nvim_set_hl(0, "StatusLine", { link = "Normal" })
+    vim.api.nvim_set_hl(0, "StatusLineNC", { link = "Normal" })
   end,
 })
 
 -- Apply immediately
-vim.api.nvim_set_hl(0, "WinSeparator", { fg = "#6c7d9c", bold = true })
+vim.api.nvim_set_hl(0, "WinSeparator", { fg = "#565f89", bold = true })
+vim.api.nvim_set_hl(0, "StatusLine", { link = "Normal" })
+vim.api.nvim_set_hl(0, "StatusLineNC", { link = "Normal" })

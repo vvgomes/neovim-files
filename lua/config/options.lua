@@ -2,12 +2,16 @@
 -- Default options that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/options.lua
 -- Add any additional options here
 
--- Make window separators more visible
+-- Make window separators more visible with no gaps
 vim.opt.fillchars = {
-  vert = "┃",     -- Vertical separator for splits
-  vertleft = "┃",
-  vertright = "┃",
-  horiz = "━",
-  horizup = "━",
-  horizdown = "━",
+  horiz = "─",
+  horizup = "┴",
+  horizdown = "┬",
+  vert = "│",
+  vertleft = "┤",
+  vertright = "├",
+  verthoriz = "┼",
 }
+
+-- Ensure statusline has bottom border
+vim.opt.laststatus = 3  -- Global statusline
