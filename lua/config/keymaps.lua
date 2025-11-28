@@ -3,6 +3,7 @@
 -- Add any additional keymaps here
 
 -- gb to navigate back from gd
--- gB to navigate forward
 vim.keymap.set("n", "gb", "<C-o>")
+
+-- gB to navigate forward
 vim.keymap.set("n", "gB", "<C-i>")
